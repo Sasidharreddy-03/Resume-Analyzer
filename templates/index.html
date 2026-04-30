@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Analyser</title>
+<head>
+<body>
+    <h1>Resume Analyser</h1>
+    <p>Upload your resume and paste a job description to see how well you match.</p>
+
+    <form action = "analyse" method = "POST" enctype = "multipart/form-data"> 
+        <label> Upload Resume (PDF): </label>
+        <input type = "file" name = "resume" accept = ".pdf"> <br><br>
+        <label>Paste Job Description: </label><br>
+        <textarea name = "job_desc" rows = "8" cols = "50"></textarea><br><br>
+
+        <button type = "submit"> Analyse </button>
+    </form>
+</body>
+</html>
+    
+    

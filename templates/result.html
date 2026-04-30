@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Results</title>
+</head>
+<body>
+    <h1>Match Score: {{ result.score }}%</h1>
+
+    <h2>✅ Keywords Found in Your Resume</h2>
+    <p>{{ result.matched | join(', ') }}</p>
+
+    <h2>❌ Missing Keywords</h2>
+    <p>{{ result.missing | join(', ') }}</p>
+
+    <br>
+    <a href="/">← Analyse another resume</a>
+</body>
+</html>
