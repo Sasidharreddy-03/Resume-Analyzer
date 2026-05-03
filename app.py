@@ -12,6 +12,10 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 def home():
     return render_template('index.html')
 
+@app.route('/health')
+def health():
+    return "ok"
+
 @app.route('/analyse', methods = ['POST'])
 def analyse_resume():
     file = request.files['resume']
