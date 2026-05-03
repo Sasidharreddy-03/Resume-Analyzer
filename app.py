@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request
-from analyser import extract_text_from_pdf, analyse
+from analyser import extract_text_from_pdf, analyse, get_ai_suggestions, get_interview_questions
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -19,6 +22,10 @@ def analyse_resume():
     resume_text = extract_text_from_pdf(file_path)
     result = analyse(resume_text, job_desc)
 
-    return render_template('result.html', result=result)
+    tips = get_ai_suggestions(resume_text, job_desc, result['missing'])
+    questions = get_interview_questions(job_desc, resume_text)
+
+
+    return render_template('result.html',result=result,tips = tips,questions = questions)
 if __name__ == '__main__':
     app.run(debug=True)
