@@ -1,6 +1,6 @@
-import PyPDF2
-from google import genai
-import os
+import PyPDF2 
+from google import genai 
+import os 
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -44,7 +44,7 @@ Give exactly 4 specific actionable tips numbered like:
 4. tip
 """
         response = client.models.generate_content(
-            model="gemini-2.0-flash-lite",
+            model="gemini-2.5-flash-lite",
             contents=prompt
         )
         tips = response.text.strip().split('\n')
@@ -73,7 +73,7 @@ Generate exactly 5 technical interview questions numbered like:
 5. question
 """
         response = client.models.generate_content(
-            model="gemini-2.0-flash-lite",
+            model="gemini-2.5-flash-lite",
             contents=prompt
         )
         questions = response.text.strip().split('\n')
