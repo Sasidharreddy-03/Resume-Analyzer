@@ -1,7 +1,8 @@
 # Resume Analyser
 
-An AI-powered web app that matches your resume against 
-any job description and gives actionable feedback.
+This is an AI-powered web application that matches your resume against 
+any job description, generates score percentage and displays some missing keywords.
+Also it generates feedback with tips using gemini API and gives some interview questions that has high chances of asking in interview for that job description.
 
 ## Features
 - Upload resume PDF
