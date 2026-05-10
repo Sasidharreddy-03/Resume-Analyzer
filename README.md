@@ -15,7 +15,4 @@ any job description and gives actionable feedback.
 - Python, Flask
 - PyPDF2
 - Google Gemini AI
-- Deployed on Render
 
-## Live Demo
-https://resume-analyzer-vvop.onrender.com
